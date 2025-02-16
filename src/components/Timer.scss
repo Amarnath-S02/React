@@ -1,0 +1,52 @@
+.Timer{
+    text-align: center;
+    font-size: 50px;
+    padding: 10px;
+    .count{
+
+        font-size: 200px;
+    }
+    
+    .bt1{
+        background-color: rgb(5, 104, 18);
+        color: aliceblue;
+        padding: 10px;
+        border-radius: 5px ;
+        border: 2px solid rgba(37, 168, 76, 0.363);
+        cursor: pointer;
+        margin: 10px;
+
+        &:hover{
+            background-color: rgb(5, 65, 8);
+            font-size: 15px;
+        }
+    }
+    .bt3{
+        background-color: rgb(61, 40, 180);
+        color: aliceblue;
+        padding: 10px;
+        border-radius: 5px ;
+        border: 2px solid  rgba(84, 48, 180, 0.555);
+        cursor: pointer;
+        margin: 10px;
+        &:hover{
+            background-color: rgb(18, 6, 185);
+            font-size: 15px;
+        }
+    }
+    .bt2{
+        background-color: rgb(182, 18, 18);
+        color: aliceblue;
+        padding: 10px;
+        border-radius: 5px ;
+        border: 2px solid rgba(219, 86, 86, 0.123);
+        cursor: pointer;
+        margin: 10px;
+        &:hover{
+            background-color: rgb(238, 6, 6);
+            font-size: 15px;
+        }
+    }
+}
+
+
