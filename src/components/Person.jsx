@@ -1,9 +1,6 @@
 import React,{ useState } from "react";
 
 
-
-
-
 function Person(){
     const [name,setName]=useState("Amar");
     const handleName=()=>{

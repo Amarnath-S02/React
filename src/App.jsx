@@ -8,7 +8,7 @@ import Order from './components/Order'
 import Useeffect from './components/Useeffect'
 import Display from './components/Display'
 import Useref from './components/Useref'
-import Usememo from './components/USememo'
+import Usememo from './components/Usememo'
 import { useState } from 'react'
 import Callback from './components/CAllback'
 
@@ -37,8 +37,9 @@ const App = () => {
     {/* <Display/> */}
     {/* <Useref/> */}
   {/*   <Usememo/> */}
-   <p>Count:{count}</p>
-   <Callback handleClick={handleClick}/>
+   {/* <p>Count:{count}</p>
+   <Callback handleClick={handleClick}/> */}
+   <Usememo/>
 
     </>
     
