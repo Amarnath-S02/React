@@ -8,9 +8,13 @@ import Order from './components/Order'
 import Useeffect from './components/Useeffect'
 import Display from './components/Display'
 import Useref from './components/Useref'
-import Usememo from './components/Usememo'
+
 import { useState } from 'react'
 import Callback from './components/CAllback'
+import ProductList from './components/ProductList'
+import {RecoilRoot} from "recoil"
+import ShoppingCart from './components/ShoppingCart'
+import CheckOut from './components/CheckOut'
 
 
 
@@ -36,10 +40,16 @@ const App = () => {
     {/* <Useeffect/> */}
     {/* <Display/> */}
     {/* <Useref/> */}
-  {/*   <Usememo/> */}
+   {/*   <Usememo/> */}
    {/* <p>Count:{count}</p>
    <Callback handleClick={handleClick}/> */}
-   <Usememo/>
+   {/* <Usememo/> */}
+
+   <RecoilRoot>
+    <ProductList/>
+    <ShoppingCart/>
+    <CheckOut/>
+   </RecoilRoot>
 
     </>
     
