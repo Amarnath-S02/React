@@ -7,7 +7,8 @@ const CheckOut = () => {
     const Orders=useRecoilValue(placeOrder)
     const  setCartItem=useSetRecoilState(cartItem)          
    function handleOrder(){
-    setCartItem([])}
+    setCartItem([])
+  }
 
     
    

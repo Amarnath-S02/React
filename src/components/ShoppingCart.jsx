@@ -8,19 +8,28 @@ const ShoppingCart = () => {
     function increment(product){
       setItems((items)=>{
         return items.map((item)=>{
+          
            return  item.name == product.name ?{...product,quantity:item.quantity+1} : item 
         })
       })
     }
-    function decrement(product){
-        setItems((items)=>{
-          return items.map((item)=>{
-             return  item.name == product.name ?{...product,quantity:item.quantity-1} : item 
-          })
-        })
-      }
+
+    function decrement(product) {
+      setItems((items) => {
+        return items
+          .map((item) =>{
+          return   item.name === product.name
+              ? item.quantity > 1
+                ? { ...item, quantity: item.quantity - 1 }
+                : null
+              : item}
+          )
+          .filter(Boolean);
+      });
+    }
+    
   return (
-    <div className='products'>
+    <div>
         <hr />
         <h1>Shopping Cart</h1>
      <div >
@@ -32,7 +41,8 @@ const ShoppingCart = () => {
                 <p>Price:{product.price}</p>
                 <p>Quantity:{product.quantity}</p> 
                 <button className='btn1' onClick={()=>{increment(product)}}>+</button> 
-                 <button className='btn2' onClick={()=>{decrement(product)}}>-</button>   
+                <button className='btn2' onClick={()=>{decrement(product)}}>-</button> 
+                 
                 
             </div>
         })}

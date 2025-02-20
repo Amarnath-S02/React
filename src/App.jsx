@@ -8,13 +8,14 @@ import Order from './components/Order'
 import Useeffect from './components/Useeffect'
 import Display from './components/Display'
 import Useref from './components/Useref'
-
+import { Routes, Route } from 'react-router-dom';
 import { useState } from 'react'
 import Callback from './components/CAllback'
 import ProductList from './components/ProductList'
 import {RecoilRoot} from "recoil"
 import ShoppingCart from './components/ShoppingCart'
 import CheckOut from './components/CheckOut'
+import Navbar from './components/navbar'
 
 
 
@@ -46,14 +47,20 @@ const App = () => {
    {/* <Usememo/> */}
 
    <RecoilRoot>
-    <ProductList/>
-    <ShoppingCart/>
-    <CheckOut/>
-   </RecoilRoot>
+      {/* Router should wrap everything, not be inside Routes */}
+     
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<ProductList />} />
+          <Route path="/shoppingcart" element={<ShoppingCart />} />
+          <Route path="/checkout" element={<CheckOut />} />
+        </Routes>
+      
+    </RecoilRoot>
 
     </>
     
   )
 }
 
-export default App
+export default App;
